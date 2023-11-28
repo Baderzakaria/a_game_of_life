@@ -65,14 +65,12 @@ def play_the_game(iterations:int):
 
     for iteration in range(iterations):
         grid = numpy.reshape(not_next, (size, size))
-        st.text(f"Game of Life - Iteration {iteration}")
         display_grid(life_container, grid)
         iteration_container.text(f"Iteration {iteration}")
         not_next = gen_next_state(not_next)
         time.sleep(0.15)
 
 def display_grid(container, grid):
-    # container.title(f"Game of Life - Iteration {iterations}")
     html_grid = generate_html_grid(grid)
     container.markdown(html_grid, unsafe_allow_html=True)
 
