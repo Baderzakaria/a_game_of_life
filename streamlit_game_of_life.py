@@ -2,6 +2,7 @@ import streamlit as st
 import time
 import numpy
 import time
+import random
 # space = [[random.choice(['X','0']) for _ in range(20)] for _ in range(20)]
 
 size = 40
@@ -12,7 +13,6 @@ dead_cell_string = ' '
 better_space = [random.choice([living_cell_string, dead_cell_string]) for _ in range(size**2)]
 better_space = numpy.array(better_space)
 def print_da_game(better_space:numpy.array) -> None:
-    os.system('cls')
     counter = 1
     for cell in better_space:
         print(cell,end='')
