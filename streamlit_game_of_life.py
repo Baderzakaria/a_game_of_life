@@ -1,5 +1,4 @@
 import streamlit as st
-import life_game as lg
 import time
 import numpy
 import time
